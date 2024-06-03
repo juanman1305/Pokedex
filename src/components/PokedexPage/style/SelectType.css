@@ -1,0 +1,29 @@
+.select {
+    padding: 0.5em 0.7em;
+    font-size: 1.2em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    color: #333;
+    margin: 2em 2em 2em 0;
+    width: 30%;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      border-color: #aaa;
+    }
+  }
+  
+  
+  .option__select {
+    font-size: 1em;
+  }
+  
+  .option__select:hover {
+    background-color: #352e2e5d;
+  }
+  

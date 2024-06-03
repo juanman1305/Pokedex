@@ -1,0 +1,79 @@
+.pokemons__page {
+
+    .pages__list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.3em;
+
+        .page__number {
+            cursor: pointer;
+            color: white;
+            font-weight: 800;
+            border: 0.3em solid rgb(236, 99, 7);
+            border-radius: 0.2em;
+            background-color: rgb(238, 112, 29);
+            width: 2.2rem;
+            transition: transform 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+                filter: brightness(1.2);
+                transform: scale(1.1);
+            }
+        }
+
+        .page__selected {
+            background-color: rgb(255, 38, 0);
+            border: 0.3em solid rgb(255, 0, 0);
+        }
+
+        .change__btn {
+            cursor: pointer;
+            /* padding: 0.5em; */
+            color: white;
+            font-weight: 800;
+            border: 0.3em solid rgb(73, 6, 136);
+            border-radius: 0.2em;
+            background-color: rgb(42, 58, 104);
+            width: 2em;
+            text-align: center;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                filter: brightness(1.1);
+                transform: scale(1.1);
+            }
+        }
+
+        .changeBlock__btn {
+            cursor: pointer;
+            padding: 0.5em;
+            color: white;
+            font-weight: 800;
+            border: 0.3em solid rgb(6, 122, 12);
+            border-radius: 0.2em;
+            background-color: rgb(30, 134, 4);
+            width: 2.5rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                filter: brightness(1.5);
+                transform: scale(1.1);
+            }
+        }
+
+
+    }
+
+    .pokemons-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+    }
+}

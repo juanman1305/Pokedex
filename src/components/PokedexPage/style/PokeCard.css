@@ -1,0 +1,314 @@
+.card {
+    width: 100%;
+    max-width: 17em;
+    /* border: 0.4em solid; */
+    /* border-color: green; */
+    border-radius: 0.7rem;
+    margin: 1.3rem;
+    transition: transform 0.2s ease;
+
+    .card__header {
+        background-color: rgb(60, 92, 60);
+        aspect-ratio: 2;
+        width: 100%;
+        position: relative;
+        border-radius: 0 0 0.4em 0.4em;
+
+        .card__img {
+            position: absolute;
+            width: 55%;
+            top: 2em;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    .card__principal {
+        margin-top: 3.5em;
+
+        .card__name {
+            text-align: center;
+            text-transform: capitalize;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.2em;
+        }
+
+        .card__types {
+            --gap-types: 0.7em;
+            display: flex;
+            justify-content: center;
+            gap: var(--gap-types);
+            
+            /* selector: todos lo elementos .card__type, que no sean el primer hijo,
+            selecciona el pseudo-elemento '::before' del elemento, y ponle a ese
+            pseudo elemento un contenido de '/', y un padding a la derecha  */
+            .card__type:not(:nth-child(1))::before {
+                content: '/';
+                padding-right: var(--gap-types);
+            }
+        }
+    }
+
+    .card__hr {
+        --margin-y: 0.8em;
+        margin-top: var(--margin-y);
+        margin-bottom: var(--margin-y);
+        border-top: 1px solid #ccc5;
+        margin-inline: 2em;
+    }
+
+    .card__stats {
+        padding: 1em 1em 2em;
+
+        .card__list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 1em;
+
+            .card__stat {
+                display: flex;
+                flex-direction: column;
+                gap: 0.3em;
+                align-items: center;
+                /* justify-content: center; */
+
+                .card__stat__label {
+                    text-transform: uppercase;
+                    font-size: 0.7rem;
+                    font-weight: 600;
+                }
+
+                .card__stat__value {
+                    font-size: 1.2rem;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+}
+
+/* > *:not(.card__type):not(.card__stat__label) */
+
+/* color del nombre */
+.color-normal {
+    color: rgb(53, 51, 52);
+}
+.color-fighting {
+    color: rgb(204, 20, 20);
+}
+.color-flying {
+    color: rgb(76, 192, 212);
+}
+.color-poison {
+    color: rgb(158, 55, 153);
+}
+.color-ground {
+    color: rgb(50%, 25%, 0%);
+}
+.color-rock {
+    color: rgba(53, 51, 51, 0.87);
+}
+.color-bug {
+    color: rgb(49, 90, 16);
+}
+.color-ghost {
+    color: rgba(50, 91, 153, 0.534);
+}
+.color-steel {
+    color: rgba(107, 107, 100, 0.658);
+}
+.color-fire {
+    color: rgb(245, 63, 30);
+}
+.color-water {
+    color: rgb(15, 15, 117);
+}
+.color-grass {
+    color: rgb(81, 199, 81);
+}
+.color-electric {
+    color: rgb(218, 218, 2);
+}
+.color-psychic {
+    color: rgb(240, 0, 100);
+}
+.color-ice {
+    color: rgb(62, 62, 247);
+}
+.color-dragon {
+    color: rgb(238, 72, 6);
+}
+.color-dark {
+    color: rgb(32, 32, 22);
+}
+.color-fairy {
+    color: rgb(255, 33, 218);
+}
+.color-unknown {
+    color: rgb(12, 12, 15);
+}
+.color-shadow {
+    color: rgb(102, 112, 102);
+}
+
+/* color de fondo del header */
+/* .bg-grass {
+    background: linear-gradient(178.92deg, #7EC6C5 0.92%, #ABDAC6 47.96%, #CAE099 99.08%);
+}
+} */
+.bg-normal {
+    background: linear-gradient(178.92deg, #353334 -70.14%, #636261 56.16%, #a3a1a1 214.85%);
+}
+.bg-fighting {
+    background: linear-gradient(178.92deg, #cc1414 -70.14%, #ff5959 56.16%, #f39999 214.85%);
+}
+.bg-flying {
+    background: linear-gradient(178.92deg, #4cc0d4 -70.14%, #93e1ea 56.16%, #d2f8ff 214.85%);
+}
+.bg-poison {
+    background: linear-gradient(178.92deg, #9e3799 -70.14%, #d264cc 56.16%, #f8a7ff 214.85%);
+}
+.bg-ground {
+    background: linear-gradient(178.92deg, #804000 -70.14%, #cc7f33 56.16%, #ffa14d 214.85%);
+}
+.bg-rock {
+    background: linear-gradient(178.92deg, rgba(53, 51, 51, 0.87) -70.14%, rgba(92, 88, 87, 0.87) 56.16%, rgba(163, 161, 161, 0.87) 214.85%);
+}
+.bg-bug {
+    background: linear-gradient(178.92deg, #315a10 -70.14%, #639c40 56.16%, #9bcf71 214.85%);
+}
+.bg-ghost {
+    background: linear-gradient(178.92deg, rgba(50, 91, 153, 0.534) -70.14%, rgba(98, 124, 191, 0.534) 56.16%, rgba(141, 168, 218, 0.534) 214.85%);
+}
+.bg-steel {
+    background: linear-gradient(178.92deg, rgba(107, 107, 100, 0.658) -70.14%, rgba(146, 146, 139, 0.658) 56.16%, rgba(181, 181, 175, 0.658) 214.85%);
+}
+.bg-fire {
+    background: linear-gradient(178.92deg, #f53f1e -70.14%, #ff7a5e 56.16%, #ffbaa0 214.85%);
+}
+.bg-water {
+    background: linear-gradient(178.92deg, #0f0f75 -70.14%, #4e4eff 56.16%, #b3b3ff 214.85%);
+}
+.bg-grass {
+    background: linear-gradient(178.92deg, #51c751 -70.14%, #87df87 56.16%, #bff1bf 214.85%);
+}
+.bg-electric {
+    background: linear-gradient(178.92deg, #dada02 -70.14%, #ffff64 56.16%, #ffffcd 214.85%);
+}
+.bg-psychic {
+    background: linear-gradient(178.92deg, #f00064 -70.14%, #ff5d97 56.16%, #ff9fc7 214.85%);
+}
+.bg-ice {
+    background: linear-gradient(178.92deg, #3e3ef7 -70.14%, #6f6fff 56.16%, #a8a8ff 214.85%);
+}
+.bg-dragon {
+    background: linear-gradient(178.92deg, #ee4806 -70.14%, #ff7e3a 56.16%, #ffb777 214.85%);
+}
+.bg-dark {
+    background: linear-gradient(178.92deg, #202016 -70.14%, #4e4e43 56.16%, #89897e 214.85%);
+}
+.bg-fairy {
+    background: linear-gradient(178.92deg, #ff21da -70.14%, #ff79ff 56.16%, #ffc1ff 214.85%);
+}
+.bg-unknown {
+    background: linear-gradient(178.92deg, #0c0c0f -70.14%, #3d3d42 56.16%, #7c7c82 214.85%);
+}
+.bg-shadow {
+    background: linear-gradient(178.92deg, #667066 -70.14%, #858984 56.16%, #b0b0b1 214.85%);
+}
+
+
+
+/* color del borde */
+/* .border-grass {
+    border: 10px solid;
+    border-image-source: linear-gradient(179.27deg, #B1DBBC -20.76%, #C3DEA3 157.95%);
+}
+} */
+
+.border-normal {
+    border: 10px solid;
+    border-color: rgb(53, 51, 52);
+}
+.border-fighting {
+    border: 10px solid;
+    border-color: rgb(204, 20, 20);
+}
+.border-flying {
+    border: 10px solid;
+    border-color: rgb(76, 192, 212);
+}
+.border-poison {
+    border: 10px solid;
+    border-color: rgb(158, 55, 153);
+}
+.border-ground {
+    border: 10px solid;
+    border-color: rgb(50%, 25%, 0%);
+}
+.border-rock {
+    border: 10px solid;
+    border-color: rgba(53, 51, 51, 0.87);
+}
+.border-bug {
+    border: 10px solid;
+    border-color: rgb(49, 90, 16);
+}
+.border-ghost {
+    border: 10px solid;
+    border-color: rgba(50, 91, 153, 0.534);
+}
+.border-steel {
+    border: 10px solid;
+    border-color: rgba(107, 107, 100, 0.658);
+}
+.border-fire {
+    border: 10px solid;
+    border-color: rgb(245, 63, 30);
+}
+.border-water {
+    border: 10px solid;
+    border-color: rgb(15, 15, 117);
+}
+.border-grass {
+    border: 10px solid;
+    border-color: rgb(81, 199, 81);
+}
+.border-electric {
+    border: 10px solid;
+    border-color: rgb(218, 218, 2);
+}
+.border-psychic {
+    border: 10px solid;
+    border-color: rgb(240, 0, 100);
+}
+.border-ice {
+    border: 10px solid;
+    border-color: rgb(62, 62, 247);
+}
+.border-dragon {
+    border: 10px solid;
+    border-color: rgb(238, 72, 6);
+}
+.border-dark {
+    border: 10px solid;
+    border-color: rgb(32, 32, 22);
+}
+.border-fairy {
+    border: 10px solid;
+    border-color: rgb(255, 33, 218);
+}
+.border-unknown {
+    border: 10px solid;
+    border-color: rgb(12, 12, 15);
+}
+.border-shadow {
+    border: 10px solid;
+    border-color: rgb(102, 112, 102);
+}

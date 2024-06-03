@@ -1,0 +1,48 @@
+.filters__wrapper {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+
+    .form__filter {
+        margin: 2em 0 2em 2em;
+        width: 55%;
+        max-width: 50em;
+        
+        .input__form {
+            padding: 0.5em 0.7em;
+            width: 60%;
+            font-size: 1.2em;
+            border: none;
+            box-shadow: 0.5em 0.3em 0.5em rgba(0, 0, 0, 0.082);
+        }
+
+        .button__form {
+            padding: 0.5em 0;
+            width: 40%;
+            font-size: 1.2em;
+            text-align: center;
+            color: white;
+            font-weight: 500;
+            background-color: rgb(250, 35, 7);
+            border: none;
+            box-shadow: 0 0.3em 0.5em rgba(0, 0, 0, 0.082);
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+        }
+        
+    }
+}
+
+.welcome__msg {
+    margin: 3em auto 0;
+    text-align: center;
+
+    .trainer__name {
+        color: red;
+    }
+}

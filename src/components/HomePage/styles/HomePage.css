@@ -1,0 +1,28 @@
+.homePage__info {
+
+    /* background-color: white; */
+    .img__title-container {
+        width: 40%;
+        overflow: hidden;
+        margin: 12rem auto 3rem;
+    
+        .title__image {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    
+    .trainer__greeting {
+        text-align: center;
+        font-size: 2em;
+        color: rgb(255, 12, 12);
+    }
+    
+    .trainer__msg {
+        text-align: center;
+        font-size: 1.3em;
+        font-weight: 600;
+        margin-top: 1em;
+    }
+}
